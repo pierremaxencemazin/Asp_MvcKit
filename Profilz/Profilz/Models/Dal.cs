@@ -43,5 +43,6 @@ namespace Profilz.Models
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Dal>());
         }
 
+        public System.Data.Entity.DbSet<Profilz.Models.Model> Models { get; set; }
     }
 }
