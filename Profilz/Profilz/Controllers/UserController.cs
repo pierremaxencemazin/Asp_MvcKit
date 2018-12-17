@@ -15,5 +15,18 @@ namespace Profilz.Controllers
         {
             return View(dal.Users.Local.ToList());
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(User u)
+        {
+            dal.Users.Add(u);
+            dal.SaveChanges();
+            return RedirectToAction("Index");
+           
+        }
     }
 }

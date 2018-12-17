@@ -8,15 +8,15 @@ namespace Profilz.Controllers
 {
     public class HomeController : Controller
     {
+        public static Dictionary<string, string> myMenu = new Dictionary<string, string>();
         // GET: Home
-        public string Index()
+        public ActionResult Index()
         {
-            return "<a href =\"/home/about\">CLIQUE</a>";
-        }
+            
 
-        public ActionResult About()
-        {
             return View();
         }
+
+        
     }
 }

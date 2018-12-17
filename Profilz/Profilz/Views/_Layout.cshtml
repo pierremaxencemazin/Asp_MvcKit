@@ -8,6 +8,15 @@
     {
         ViewBag.PageTitle = "Bienvenue";
     }
+
+    //if (ViewBag.Dictionnaire == null)
+    //{
+    //    ViewBag.Dictionnaire = Profilz.Controllers.HomeController.myMenu;
+    //}
+    Profilz.Controllers.HomeController.myMenu.Clear();
+    Profilz.Controllers.HomeController.myMenu.Add("Home", "/Home/Index");
+    Profilz.Controllers.HomeController.myMenu.Add("User", "/User/Index");
+
 }
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,7 +35,8 @@
 </head>
 
 <body>
-    <header id="header">
+    @MesHelpers.TopBar("Mon Utilisateur", Profilz.Controllers.HomeController.myMenu)
+    @*<header id="header">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="/home"><img id="logo" src="http://nighthawx.com/cvdesign/wp-content/uploads/2013/10/966141_133209943540298_1790364389_o-510x462.jpg"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +67,7 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </header>*@
 
     <main id="main" class="container">
 
