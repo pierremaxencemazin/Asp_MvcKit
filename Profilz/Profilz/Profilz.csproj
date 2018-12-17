@@ -120,6 +120,9 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Home\about.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\User1.cshtml" />
+    <Content Include="Views\Home\User2.cshtml" />
+    <Content Include="Views\Home\userModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -12,11 +12,28 @@ namespace Profilz.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            
+
 
             return View();
         }
 
-        
+        public ActionResult User1()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult User1(FormCollection collection)
+        {
+            ViewData["username"] = collection["username"];
+            
+
+            return View("User2");
+        }
+
+        public ActionResult userModel()
+        {
+            return View();
+        }
     }
 }

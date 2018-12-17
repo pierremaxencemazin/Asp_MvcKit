@@ -1,0 +1,21 @@
+﻿@MesHelpers.AjouterTitre("Vue Utilisateur")
+
+@using (Html.BeginForm("User1","Home", FormMethod.Post))
+{
+    @Html.Label("username","Nom d'utilisateur")
+    @Html.TextBox("username","", new { pattern = "^[a-zA-Z0-9]+$"})
+
+    <br/>
+
+    @Html.Label("password","Mot de passe");
+    @Html.Password("password","",new {required ="required"})
+
+    <br />
+
+    @Html.Label("majeur", "Je certifie être majeur");
+    @Html.CheckBox("majeur", false);
+
+    <br />
+
+    <button type="submit">Valider</button>
+}

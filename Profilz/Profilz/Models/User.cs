@@ -21,10 +21,12 @@ namespace Profilz.Models
         [DisplayName("Adresse Email")]
         [StringLength(64)]
         [EmailAddress(ErrorMessage ="Adresse Email invalide")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required(ErrorMessage ="Mot de passe requis")]
         [DisplayName("Mot de passe")]
+        [DataType(DataType.Password)]
         [MinLength(8)]
         public string Password { get; set; }
 

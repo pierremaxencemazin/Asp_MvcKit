@@ -1,0 +1,21 @@
+﻿@model Profilz.Models.User
+
+<hr />
+@Html.BeginForm("User","Home",FormMethod.Post)
+
+@Html.LabelFor(model => model.Username)
+@Html.TextBoxFor(model => model.Username)
+
+<br />
+
+@Html.LabelFor(model => model.Password)
+@Html.EditorFor(model => model.Password)
+
+<br />
+
+@Html.LabelFor(model => model.Email)
+@Html.EditorFor(model => model.Email)
+
+<br />
+
+<button type="submit">Valider</button>
