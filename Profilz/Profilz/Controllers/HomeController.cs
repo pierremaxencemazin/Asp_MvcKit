@@ -41,6 +41,8 @@ namespace Profilz.Controllers
 
             if (ModelState.IsValid)
             {
+                HttpContext.Session["message"] = "Utilisateur validé!";
+                //HttpContext.Session.Add("message", "Utilisateur validé!");
                 return View("UserModelValidation", user);
             }
             return View(user);

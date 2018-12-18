@@ -73,6 +73,18 @@
 
         <h1>@ViewBag.Title</h1>
 
+        @{ 
+            if (HttpContext.Current.Session["message"] != null)
+            {
+                <div class="alert alert-info">
+
+                    @HttpContext.Current.Session["message"]
+
+                </div>
+                HttpContext.Current.Session["message"] = null;
+            }
+        }
+
         @RenderBody()
 
     </main>
