@@ -1,0 +1,11 @@
+﻿
+<p>Problème survenu, le code erreur est : @ViewData["errorCode"]</p>
+
+<br/>
+
+<p>L'erreur soulever est du au controleur : @ViewData["errorPage"]</p>
+
+<div>
+
+    @Html.Action("GetError", new { errorCode= @ViewData["errorCode"]})
+</div>

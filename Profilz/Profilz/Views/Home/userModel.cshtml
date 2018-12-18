@@ -1,21 +1,27 @@
 ﻿@model Profilz.Models.User
 
-<hr />
-@Html.BeginForm("User","Home",FormMethod.Post)
 
-@Html.LabelFor(model => model.Username)
-@Html.TextBoxFor(model => model.Username)
+@using (Html.BeginForm("UserModel", "Home", FormMethod.Post))
+{
 
-<br />
+    @Html.LabelFor(model => model.Username)
+    @Html.TextBoxFor(model => model.Username)
+    @Html.ValidationMessageFor(model => model.Username)
+    <br />
 
-@Html.LabelFor(model => model.Password)
-@Html.EditorFor(model => model.Password)
+    @Html.LabelFor(model => model.Password)
+    @Html.EditorFor(model => model.Password)
+    @Html.ValidationMessageFor(model => model.Password)
 
-<br />
 
-@Html.LabelFor(model => model.Email)
-@Html.EditorFor(model => model.Email)
+    <br />
 
-<br />
+    @Html.LabelFor(model => model.Email)
+    @Html.EditorFor(model => model.Email)
+    @Html.ValidationMessageFor(model => model.Email)
 
-<button type="submit">Valider</button>
+    <br />
+
+    <button type="submit">Valider</button>
+}
+
